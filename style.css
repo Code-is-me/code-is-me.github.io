@@ -1,0 +1,90 @@
+/* Basic Reset & Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header & Navbar Styling */
+.main-header {
+    background-color: #222; /* Dark background for the header */
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Pushes brand to left, nav links to right */
+    align-items: center; /* Vertically centers items */
+    max-width: 1200px; /* Max width of your content */
+    margin: 0 auto; /* Center the navbar content */
+}
+
+.navbar-brand {
+    color: #fff; /* White text for your name/logo */
+    text-decoration: none;
+    font-size: 1.8em; /* Larger font size for brand */
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    height: 40px; /* Adjust as needed for your logo */
+    vertical-align: middle;
+}
+
+.navbar-nav {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make list items go horizontal */
+}
+
+.navbar-nav li {
+    margin-left: 25px; /* Space between nav items */
+}
+
+.nav-link {
+    color: #ccc; /* Light gray text for links */
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 0; /* Add some padding for click area */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover,
+.nav-link.active { /* 'active' class for the current page */
+    color: #00bcd4; /* Example hover/active color (a teal blue) */
+}
+
+/* Styling for a 'Contact' button (optional) */
+.nav-button {
+    background-color: #00bcd4; /* Teal blue background */
+    color: #fff; /* White text */
+    padding: 8px 15px;
+    border-radius: 5px; /* Slightly rounded corners */
+    text-transform: uppercase; /* All caps */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #0097a7; /* Darker teal on hover */
+    color: #fff;
+}
+
+/* Basic main content padding */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Footer Styling (Optional) */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #666;
+    margin-top: 50px;
+}

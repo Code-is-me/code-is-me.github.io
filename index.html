@@ -3,31 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hassan Nasrallah Matouq Portfolio</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>Hassan's Arcade Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
 <body>
-    <header class="main-header">
-        <nav class="navbar">
-            <a href="index.html" class="navbar-brand">Hassan Nasrallah</a>
-            <h1>Welcome to my Portofolio</h1>
-            <ul class="navbar-nav">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link nav-button">Contact</a></li>
-                </ul>
 
-            </nav>
+    <header class="game-header">
+        <nav class="game-navbar">
+            <a href="index.html" class="game-brand">
+                Hassan's Arcade
+                </a>
+
+            <ul class="game-nav-menu">
+                <li><a href="index.html" class="nav-button active">START</a></li>
+                <li><a href="portfolio.html" class="nav-button">GAMES</a></li>
+                <li><a href="about.html" class="nav-button">PROFILE</a></li>
+                <li><a href="contact.html" class="nav-button">COMMS</a></li>
+            </ul>
+
+            <button class="mobile-menu-toggler" aria-label="Toggle navigation">&#9776;</button>
+        </nav>
     </header>
 
-    <main>
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is where my awesome projects will be displayed.</p>
+    <main class="game-main-content">
+        <section id="home-screen" class="game-section screen-panel active-panel">
+            <div class="game-dialog-box intro-dialog">
+                <p>Welcome, Player 1!</p>
+                <p>My name is Hassan Nasrallah Matouq, and this is my developer portfolio. Explore my projects and learn about my journey in the exciting world of software and game development.</p>
+                <p>Press START to begin your adventure!</p>
+                <button class="game-start-button">START GAME</button>
+                <div class="blinking-text">_</div> </div>
+            </section>
+
+        <section id="game-library" class="game-section screen-panel">
+            <h2>-- GAME LIBRARY --</h2>
+            <div class="project-grid">
+                <a href="project-1.html" class="project-card">
+                    <img src="https://img.itch.zone/aW1nLzE5MTA2Mjk1LmpwZw==/315x250%23c/lLWFbe.jpg" alt="Project 1 Screenshot">
+                    <h3>Dragon runner</h3>
+                    <p>A 2D platformer built with Godot Engine.</p>
+                    <span class="card-status">STATUS: COMPLETED</span>
+                </a>
+                <a href="project-2.html" class="project-card">
+                    <img src="https://img.itch.zone/aW1nLzIxMTgzNjIwLnBuZw==/315x250%23c/JRg3VU.png" alt="Project 2 Screenshot">
+                    <h3>Angker</h3>
+                    <p>2D Survival Horror Multiplayer Game of 4 Players.</p>
+                    <span class="card-status">STATUS: ONLINE</span>
+                </a>
+                </div>
+        </section>
+
+        <section id="player-profile" class="game-section screen-panel">
+            <h2>-- PLAYER PROFILE --</h2>
+            <div class="profile-stats-panel">
+                <div class="profile-avatar">
+                    <img src="https://via.placeholder.com/120x120/0d0d21/00ffea?text=Your+Pixel+Avatar" alt="Hassan's Pixel Avatar">
+                </div>
+                <div class="profile-details">
+                    <p><strong>Name:</strong> Hassan Nasrallah Matouq</p>
+                    <p><strong>Class:</strong> Software Engineer / Game Developer</p>
+                    <p><strong>Level:</strong> [Your Current Experience Level]</p>
+                    <p><strong>Specialties:</strong> C#, GDScript, Python, Backend Dev, Game Design</p>
+                    <p><strong>Mission Log:</strong></p>
+                    <p class="mission-log-text">I'm a 23-year-old software engineering student with a passion for crafting immersive game experiences. My journey began with [brief origin story/passion]. I'm seeking an internship to level up my skills and contribute to exciting new projects.</p>
+                </div>
+            </div>
+            <h3>-- SKILLS --</h3>
+            <div class="skills-grid">
+                <div class="skill-bar"><span>C#</span><div class="progress" style="width: 90%;"></div></div>
+                <div class="skill-bar"><span>GDScript</span><div class="progress" style="width: 85%;"></div></div>
+                <div class="skill-bar"><span>Python</span><div class="progress" style="width: 75%;"></div></div>
+                </div>
+            <a href="path/to/your_resume.pdf" class="nav-button download-resume">Download Resume</a>
+        </section>
+
+        <section id="comms-link" class="game-section screen-panel">
+            <h2>-- COMMS LINK --</h2>
+            <div class="comms-panel">
+                <p>Establishing connection... Type your message and hit 'SEND'.</p>
+                <form action="#" method="POST" class="contact-form">
+                    <input type="text" placeholder="Sender ID (Your Name)" required>
+                    <input type="email" placeholder="Return Address (Your Email)" required>
+                    <textarea placeholder="Message (e.g., Mission Details, Collaboration Offer)" rows="5" required></textarea>
+                    <button type="submit" class="nav-button send-message">SEND MESSAGE</button>
+                </form>
+                <div class="contact-socials">
+                    <p>Or find me on:</p>
+                    <a href="https://github.com/Code-is-me" target="_blank" class="social-icon">GitHub</a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">LinkedIn</a>
+                    </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2025 Hassan Nasrallah Matouq. All rights reserved.</p>
+    <footer class="game-footer">
+        <p>CONSOLE_STATUS: OPERATIONAL | &copy; 2025 Hassan Nasrallah Matouq. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

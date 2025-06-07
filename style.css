@@ -382,12 +382,18 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
+/* Ganti .social-icon yang lama dengan kode ini di style.css */
 .social-icon {
+    border-radius: 50%; /* Ini akan membuatnya jadi lingkaran */
+    display: inline-flex; /* Penting untuk menengahkan ikon */
+    justify-content: center;
+    align-items: center;
+    width: 45px;          /* Lebar tombol */
+    height: 45px;         /* Tinggi tombol */
+    padding: 0;           /* Hapus padding karena sudah pakai width/height */
     background-color: #00ffea;
-    color: #0d0d21; /* Dark text on neon */
-    font-family: 'Press Start 2P', cursive;
-    padding: 8px 15px;
-    border-radius: 5px;
+    color: #0d0d21;
+    border-radius: 5px;   /* Tombol persegi dengan sudut sedikit tumpul */
     text-decoration: none;
     margin: 0 8px;
     box-shadow: 2px 2px 0px #0097a7;
@@ -398,6 +404,11 @@ h1, h2, h3 {
     transform: translate(2px, 2px);
     box-shadow: none;
     background-color: #00ccb9;
+}
+
+/* Aturan baru untuk mengatur ukuran ikon di dalam tombol */
+.social-icon i {
+    font-size: 1.8em; /* Sesuaikan ukuran ikon jika perlu */
 }
 
 

@@ -4,74 +4,79 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuToggler = document.querySelector('.mobile-menu-toggler');
     const gameNavMenu = document.querySelector('.game-nav-menu');
     const startButton = document.querySelector('.game-start-button');
-    const homeScreen = document.getElementById('home-screen');
 
-    // Function to show a specific section
-    function showSection(id) {
+    // Fungsi untuk menampilkan panel/section tertentu berdasarkan ID-nya
+    function showSection(targetId) {
+        // Sembunyikan semua section
         sections.forEach(section => {
             section.classList.remove('active-panel');
         });
-        document.getElementById(id).classList.add('active-panel');
 
-        // Update active class on nav buttons
+        // Tampilkan section yang dituju
+        const targetSection = document.querySelector(targetId);
+        if (targetSection) {
+            targetSection.classList.add('active-panel');
+        }
+
+        // Perbarui tombol aktif di navigasi
         navButtons.forEach(button => {
             button.classList.remove('active');
-            if (button.getAttribute('href').includes(id.replace('-screen', ''))) {
+            if (button.getAttribute('href') === targetId) {
                 button.classList.add('active');
             }
         });
 
-        // Close mobile menu if open
-        if (mobileMenuToggler && gameNavMenu.classList.contains('active')) {
-             gameNavMenu.classList.remove('active');
+        // Tutup menu mobile jika sedang terbuka
+        if (gameNavMenu.classList.contains('active')) {
+            gameNavMenu.classList.remove('active');
         }
     }
 
-    // Event listener for nav buttons
+    // Tambahkan event listener untuk setiap tombol navigasi
     navButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default link behavior
-            const targetId = button.getAttribute('href').split('.')[0] + '-screen'; // e.g., 'index-screen'
+            e.preventDefault(); // Mencegah pindah halaman
+            const targetId = button.getAttribute('href'); // Ambil href (misal: "#comms-link")
             showSection(targetId);
+            window.history.pushState(null, '', targetId); // Ubah URL tanpa reload
         });
     });
 
-    // Event listener for mobile menu toggler
+    // Event listener untuk tombol menu mobile
     if (mobileMenuToggler) {
         mobileMenuToggler.addEventListener('click', () => {
             gameNavMenu.classList.toggle('active');
         });
     }
 
-    // Event listener for "START GAME" button on home screen
+    // Event listener untuk tombol "START GAME"
     if (startButton) {
         startButton.addEventListener('click', () => {
-            showSection('game-library'); // Directly go to Game Library or Portfolio
+            // Ganti ini dengan ID section game Anda
+            const gameSectionId = '#game-library'; 
+            showSection(gameSectionId);
+            window.history.pushState(null, '', gameSectionId);
         });
     }
 
-    // Initial load: show home screen or specific section based on URL hash (optional)
-    const initialSectionId = window.location.hash.substring(1) + '-screen' || 'home-screen';
-    if (document.getElementById(initialSectionId)) {
-        showSection(initialSectionId);
-    } else {
-        showSection('home-screen'); // Default to home if hash invalid
-    }
+    // Tampilkan section yang benar saat halaman pertama kali dimuat
+    const initialTarget = window.location.hash || '#home-screen';
+    showSection(initialTarget);
 
-    // Simulate progress bars filling up when profile is active
+    // Observer untuk animasi skill bar di profile
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting && entry.target.id === 'player-profile') {
                 document.querySelectorAll('.skill-bar .progress').forEach(progress => {
-                    const width = progress.style.width; // Get the defined width
-                    progress.style.width = '0%'; // Reset to 0
+                    const finalWidth = progress.getAttribute('data-width');
+                    progress.style.width = '0%';
                     setTimeout(() => {
-                        progress.style.width = width; // Set to actual width after short delay
+                        progress.style.width = finalWidth;
                     }, 100);
                 });
             }
         });
-    }, { threshold: 0.5 }); // Trigger when 50% of the section is visible
+    }, { threshold: 0.5 });
 
     const playerProfileSection = document.getElementById('player-profile');
     if (playerProfileSection) {

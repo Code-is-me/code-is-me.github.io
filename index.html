@@ -11,15 +11,15 @@
 
     <header class="game-header">
         <nav class="game-navbar">
-            <a href="index.html" class="game-brand">
+            <a href="#home-screen" class="game-brand">
                 Hassan's Arcade
-                </a>
+            </a>
 
             <ul class="game-nav-menu">
-                <li><a href="index.html" class="nav-button active">START</a></li>
-                <li><a href="portfolio.html" class="nav-button">GAMES</a></li>
-                <li><a href="about.html" class="nav-button">PROFILE</a></li>
-                <li><a href="contact.html" class="nav-button">COMMS</a></li>
+                <li><a href="#home-screen" class="nav-button active">START</a></li>
+                <li><a href="#game-library" class="nav-button">GAMES</a></li>
+                <li><a href="#player-profile" class="nav-button">PROFILE</a></li>
+                <li><a href="#comms-link" class="nav-button">COMMS</a></li>
             </ul>
 
             <button class="mobile-menu-toggler" aria-label="Toggle navigation">&#9776;</button>
@@ -33,8 +33,9 @@
                 <p>My name is Hassan Nasrallah Matouq, and this is my developer portfolio. Explore my projects and learn about my journey in the exciting world of software and game development.</p>
                 <p>Press START to begin your adventure!</p>
                 <button class="game-start-button">START GAME</button>
-                <div class="blinking-text">_</div> </div>
-            </section>
+                <div class="blinking-text">_</div>
+            </div>
+        </section>
 
         <section id="game-library" class="game-section screen-panel">
             <h2>-- GAME LIBRARY --</h2>
@@ -51,14 +52,14 @@
                     <p>2D Survival Horror Multiplayer Game of 4 Players. Like Cleaning Simulator but with a bit of twist</p>
                     <span class="card-status">STATUS: ONLINE</span>
                 </a>
-                </div>
+            </div>
         </section>
 
         <section id="player-profile" class="game-section screen-panel">
             <h2>-- PLAYER PROFILE --</h2>
             <div class="profile-stats-panel">
                 <div class="profile-avatar">
-                    <img src="https://via.placeholder.com/120x120/0d0d21/00ffea?text=Your+Pixel+Avatar" alt="Hassan's Pixel Avatar">
+                    <img src="https://via.placeholder.com/120x120/0d0d21/00ffea?text=HNM" alt="Hassan's Pixel Avatar">
                 </div>
                 <div class="profile-details">
                     <p><strong>Name:</strong> Hassan Nasrallah Matouq</p>
@@ -71,31 +72,30 @@
             </div>
             <h3>-- SKILLS --</h3>
             <div class="skills-grid">
-                <div class="skill-bar"><span>C#</span><div class="progress" style="width: 90%;"></div></div>
-                <div class="skill-bar"><span>GDScript</span><div class="progress" style="width: 85%;"></div></div>
-                <div class="skill-bar"><span>Python</span><div class="progress" style="width: 75%;"></div></div>
-                </div>
+                <div class="skill-bar"><span>C#</span><div class="progress" data-width="90%"></div></div>
+                <div class="skill-bar"><span>GDScript</span><div class="progress" data-width="85%"></div></div>
+                <div class="skill-bar"><span>Python</span><div class="progress" data-width="75%"></div></div>
+            </div>
             <a href="path/to/your_resume.pdf" class="nav-button download-resume">Download Resume</a>
         </section>
 
         <section id="comms-link" class="game-section screen-panel">
             <h2>-- COMMS LINK --</h2>
             <div class="comms-panel">
-                <p>Establishing connection... Type your message and hit 'SEND'.</p>
-                <form action="#" method="POST" class="contact-form">
-                    <input type="text" placeholder="Sender ID (Your Name)" required>
-                    <input type="email" placeholder="Return Address (Your Email)" required>
-                    <textarea placeholder="Message (e.g., Mission Details, Collaboration Offer)" rows="5" required></textarea>
-                    <button type="submit" class="nav-button send-message">SEND MESSAGE</button>
+                <p>Establishing secure comms link... Have a mission or a collaboration proposal? Drop your transmission below.</p>
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Sender ID (Your Name)" required>
+                    <input type="email" name="email" placeholder="Return Address (Your Email)" required>
+                    <textarea name="message" placeholder="Your transmission... (e.g., Mission Details, Collaboration Offer)" rows="5" required></textarea>
+                    <button type="submit" class="nav-button send-message">SEND TRANSMISSION</button>
                 </form>
                 <div class="contact-socials">
-                    <p>Or find me on:</p>
+                    <p>Or find my signal on these channels:</p>
                     <a href="https://github.com/Code-is-me" target="_blank" class="social-icon">GitHub</a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-icon">LinkedIn</a>
-                    </div>
+                    <a href="https://linkedin.com/in/hassan-nasrallah-matouq" target="_blank" class="social-icon">LinkedIn</a>
+                </div>
             </div>
         </section>
-
     </main>
 
     <footer class="game-footer">

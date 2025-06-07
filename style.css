@@ -254,16 +254,28 @@ h1, h2, h3 {
 }
 
 .profile-avatar {
+    /* Menentukan ukuran pasti untuk bingkai avatar */
+    width: 150px;
+    height: 150px;
     margin-right: 25px;
     border: 2px solid #ff00ff;
     padding: 5px;
-    border-radius: 50%; /* Circle for avatar */
+    border-radius: 50%; /* Membuat bingkai menjadi lingkaran sempurna */
     box-shadow: 0 0 10px rgba(255,0,255,0.5);
+    /* Mencegah gambar di dalamnya meluap keluar */
+    overflow: hidden; 
+    /* Menjaga agar div tidak mengecil jika konten lain mendorong */
+    flex-shrink: 0;
 }
 
 .profile-avatar img {
     display: block;
-    border-radius: 50%;
+    /* Membuat gambar mengisi penuh bingkai (100% dari 150px) */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Membuat gambar di dalamnya juga lingkaran */
+    /* Properti KUNCI: Memastikan gambar menutupi area tanpa gepeng */
+    object-fit: cover; 
     image-rendering: pixelated;
 }
 

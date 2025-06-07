@@ -7,8 +7,6 @@ body {
     color: #00ffea; /* Neon green/cyan text color */
     overflow-x: hidden; /* Prevent horizontal scroll from effects */
     cursor: url('https://raw.githubusercontent.com/google/material-design-icons/master/png/1x/keyboard_arrow_right_black_24dp.png'), auto; /* Example pixel/arrow cursor */
-    /* If you have a custom pixel cursor image: */
-    /* cursor: url('path/to/your/pixel-cursor.cur'), url('path/to/your/pixel-cursor.png'), auto; */
 }
 
 /* Background Grid Effect */
@@ -254,27 +252,22 @@ h1, h2, h3 {
 }
 
 .profile-avatar {
-    /* Menentukan ukuran pasti untuk bingkai avatar */
-    width: 150px;
-    height: 150px;
-    margin-right: 25px;
-    border: 2px solid #ff00ff;
-    padding: 5px;
-    border-radius: 50%; /* Membuat bingkai menjadi lingkaran sempurna */
-    box-shadow: 0 0 10px rgba(255,0,255,0.5);
-    /* Mencegah gambar di dalamnya meluap keluar */
-    overflow: hidden; 
-    /* Menjaga agar div tidak mengecil jika konten lain mendorong */
+width: 150px;
+height: 150px;
+margin-right: 25px;
+border: 2px solid #ff00ff;
+padding: 5px;
+ border-radius: 50%;
+box-shadow: 0 0 10px rgba(255,0,255,0.5);
+overflow: hidden; 
     flex-shrink: 0;
 }
 
 .profile-avatar img {
-    display: block;
-    /* Membuat gambar mengisi penuh bingkai (100% dari 150px) */
+display: block;
     width: 100%;
     height: 100%;
-    border-radius: 50%; /* Membuat gambar di dalamnya juga lingkaran */
-    /* Properti KUNCI: Memastikan gambar menutupi area tanpa gepeng */
+    border-radius: 50%;
     object-fit: cover; 
     image-rendering: pixelated;
 }
@@ -394,18 +387,17 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
-/* Ganti .social-icon yang lama dengan kode ini di style.css */
+/* KODE UNTUK SOCIAL ICON YANG SUDAH DIPERBAIKI */
 .social-icon {
-    border-radius: 50%; /* Ini akan membuatnya jadi lingkaran */
-    display: inline-flex; /* Penting untuk menengahkan ikon */
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 45px;          /* Lebar tombol */
-    height: 45px;         /* Tinggi tombol */
-    padding: 0;           /* Hapus padding karena sudah pakai width/height */
+    width: 45px;
+    height: 45px;
+    padding: 0;
     background-color: #00ffea;
     color: #0d0d21;
-    border-radius: 5px;   /* Tombol persegi dengan sudut sedikit tumpul */
+    border-radius: 50%; /* Membuat tombol menjadi lingkaran */
     text-decoration: none;
     margin: 0 8px;
     box-shadow: 2px 2px 0px #0097a7;
@@ -418,7 +410,6 @@ h1, h2, h3 {
     background-color: #00ccb9;
 }
 
-/* Aturan baru untuk mengatur ukuran ikon di dalam tombol */
 .social-icon i {
     font-size: 1.8em; /* Sesuaikan ukuran ikon jika perlu */
 }

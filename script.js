@@ -83,3 +83,49 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(playerProfileSection);
     }
 });
+// --- Modal Logic ---
+
+// Get all buttons that open a modal
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+// Get all buttons that close a modal
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+// Get the overlay element
+const overlay = document.getElementById('overlay');
+
+// Add a click event listener to each "Open" button
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+    });
+});
+
+// Add a click event listener to each "Close" button
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal'); // Find the parent modal
+        closeModal(modal);
+    });
+});
+
+// Add a click event listener to the overlay to close modals
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active');
+    modals.forEach(modal => {
+        closeModal(modal);
+    });
+});
+
+// Function to open a modal
+function openModal(modal) {
+    if (modal == null) return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
+}
+
+// Function to close a modal
+function closeModal(modal) {
+    if (modal == null) return;
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}

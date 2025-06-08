@@ -495,3 +495,148 @@ display: block;
         max-width: 100%;
     }
 }
+/* --- Custom Arcade Focus Style --- */
+.nav-button:focus {
+    /* First, remove the default browser outline */
+    outline: none; 
+
+    /* Then, add a cool glowing effect that matches your theme */
+    /* You can use the pink or cyan color from your design */
+    box-shadow: 0 0 10px 4px #006eff, 0 0 15px 7px #fff; /* Outer Pink Glow + Inner White Glow */
+
+    /* Optional: Make the glow transition smoothly */
+    transition: box-shadow 0.2s ease-in-out;
+}
+/* =============================================== */
+/* === MOBILE & DESKTOP FOCUS/TAP FIX (GLOBAL) === */
+/* =============================================== */
+
+/* Step 1: Remove the default mobile tap highlight color.
+   This gets rid of that ugly grey box that flashes on tap. */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Step 2: Apply your custom "glow" style to ALL interactive elements
+   when they receive focus. This makes the look consistent everywhere.
+   We target a, button, and the inputs in your contact form. */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    /* First, ALWAYS remove the default outline */
+    outline: none; 
+
+    /* Then, add your awesome arcade glow! */
+    /* Using a white inner glow and a pink outer glow */
+    box-shadow: 0 0 5px #fff, 0 0 12px 6px #ff00ff;
+}
+
+/* Step 3 (Optional but Recommended): For your main navigation buttons, 
+   you can make the effect slightly more pronounced. */
+.nav-button:focus {
+    box-shadow: 0 0 6px #fff, 0 0 15px 8px #ff00ff;
+}
+/* --- Style for the "Mission Briefing" Button --- */
+.details-btn {
+    background-color: #4caf50; /* A classic green arcade button color */
+    color: #fff;
+    font-family: 'Press Start 2P', cursive; /* Use your game font */
+    font-size: 12px;
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-transform: uppercase;
+    box-shadow: 0 4px #2e7d32; /* 3D button effect */
+    transition: all 0.1s ease;
+}
+
+.details-btn:hover {
+    background-color: #66bb6a;
+}
+
+.details-btn:active {
+    box-shadow: none;
+    transform: translateY(4px); /* Press down effect */
+}
+
+
+/* --- Styles for the Modal Popup --- */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 4px solid #fff; /* Pixelated border */
+    border-radius: 0; /* Sharp corners for retro look */
+    z-index: 100;
+    background-color: #1a1a1a; /* Dark background */
+    width: 80%;
+    max-width: 700px;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5); /* Green glow */
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Header panel */
+    border-bottom: 4px solid #fff;
+}
+
+.modal-header .modal-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: #4caf50; /* Green text */
+}
+
+.modal-header .close-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.modal-body {
+    padding: 20px;
+    font-family: 'Orbitron', sans-serif; /* Use your other body font */
+    line-height: 1.7;
+}
+
+.modal-body h4 {
+    font-family: 'Press Start 2P', cursive;
+    color: #4caf50; /* Green subheadings */
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+/* --- Styles for the dark background overlay --- */
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    pointer-events: none;
+    z-index: 99;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}

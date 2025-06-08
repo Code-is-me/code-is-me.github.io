@@ -39,22 +39,62 @@
         </section>
 
         <section id="game-library" class="game-section screen-panel">
-            <h2>-- GAME LIBRARY --</h2>
-            <div class="project-grid">
-                <a href="project-1.html" class="project-card">
-                    <img src="https://img.itch.zone/aW1nLzE5MTA2Mjk1LmpwZw==/315x250%23c/lLWFbe.jpg" alt="Project 1 Screenshot">
-                    <h3>Dragon runner</h3>
-                    <p>A 2D platformer built with Godot Engine that took 3 weeks.</p>
-                    <span class="card-status">STATUS: COMPLETED</span>
-                </a>
-                <a href="https://sunnyhopetogame.itch.io/angker-game" class="project-card">
-                    <img src="https://img.itch.zone/aW1nLzIxMTgzNjIwLnBuZw==/315x250%23c/JRg3VU.png" alt="Project 2 Screenshot">
-                    <h3>Angker</h3>
-                    <p>2D Survival Horror Multiplayer Game of 4 Players. Like Cleaning Simulator but with a bit of twist</p>
-                    <span class="card-status">STATUS: ONLINE</span>
-                </a>
-            </div>
-        </section>
+    <h2>-- GAME LIBRARY --</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <img src="https://img.itch.zone/aW1nLzE5MTA2Mjk1LmpwZw==/315x250%23c/lLWFbe.jpg" alt="Dragon runner Screenshot">
+            <h3>Dragon runner</h3>
+            <p>A 2D platformer built with Godot Engine that took 3 weeks.</p>
+            <span class="card-status">STATUS: COMPLETED</span>
+            <button class="details-btn" data-modal-target="#project1-modal">Mission Briefing</button>
+        </div>
+
+        <div class="project-card">
+            <a href="https://sunnyhopetogame.itch.io/angker-game" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.itch.zone/aW1nLzIxMTgzNjIwLnBuZw==/315x250%23c/JRg3VU.png" alt="Angker Screenshot">
+            </a>
+            <h3>Angker</h3>
+            <p>2D Survival Horror Multiplayer Game of 4 Players. Like Cleaning Simulator but with a bit of twist</p>
+            <span class="card-status">STATUS: ONLINE</span>
+            <button class="details-btn" data-modal-target="#project2-modal">Mission Briefing</button>
+        </div>
+    </div>
+</section>
+<div class="modal" id="project1-modal">
+    <div class="modal-header">
+        <div class="modal-title">Briefing: Dragon runner</div>
+        <button data-close-button class="close-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+        <h4>// The Mission</h4>
+        <p>Your detailed narrative about the problem you solved for Dragon runner goes here.</p>
+        
+        <h4>// My Role</h4>
+        <p>Your specific role and responsibilities on the Dragon runner project go here.</p>
+        
+        <h4>// Intel</h4>
+        <p>The challenges you faced and how you cleverly solved them on the Dragon runner project go here.</p>
+    </div>
+</div>
+
+<div class="modal" id="project2-modal">
+    <div class="modal-header">
+        <div class="modal-title">Briefing: Angker</div>
+        <button data-close-button class="close-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+        <h4>// The Mission</h4>
+        <p>Most multiplayer horror games focus on escaping a single monster. I wanted to create a different kind of cooperative tension by making the core objective—cleaning a haunted location—the source of the horror...</p>
+        
+        <h4>// My Role</h4>
+        <p>I was the Lead Gameplay Programmer. My main responsibilities were to implement the core multiplayer logic using Godot's high-level networking...</p>
+        
+        <h4>// Intel</h4>
+        <p>The biggest challenge was network synchronization. Early tests showed "ghosts" appearing at different times for different players, which ruined the shared experience...</p>
+    </div>
+</div>
+
+<div id="overlay"></div>
 
         <section id="player-profile" class="game-section screen-panel">
             <h2>-- PLAYER PROFILE --</h2>

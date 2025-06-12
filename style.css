@@ -1,3 +1,68 @@
+/* Untuk menyembunyikan section yang tidak aktif */
+.game-section.screen-panel {
+    display: none;
+}
+
+/* Untuk menampilkan section yang aktif */
+.game-section.screen-panel.active-panel {
+    display: block; /* atau flex/grid, sesuai layout Anda */
+}
+
+/* Style untuk tombol navigasi yang aktif */
+.nav-button.active {
+    background-color: #ff00ff; /* Warna neon pink untuk menandai aktif */
+    box-shadow: 0 0 15px #ff00ff;
+    color: #fff;
+}
+
+/* Untuk Modal */
+.modal {
+    display: none;
+    /* ... style modal Anda lainnya ... */
+}
+.modal.active {
+    display: block; /* Tampilkan modal saat aktif */
+}
+#overlay {
+    display: none;
+    /* ... style overlay Anda lainnya ... */
+}
+#overlay.active {
+    display: block; /* Tampilkan overlay saat modal aktif */
+}
+
+/* Untuk animasi skill bar */
+.skill-bar .progress {
+    width: 0; /* Mulai dari 0 */
+    transition: width 1.5s ease-in-out; /* Tambahkan efek transisi */
+}
+
+/* Untuk menu mobile */
+@media (max-width: 768px) {
+    .game-nav-menu {
+        display: none; /* Sembunyikan menu di mobile secara default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Sesuaikan dengan tinggi header Anda */
+        left: 0;
+        background-color: rgba(10, 10, 25, 0.9); /* Latar belakang menu mobile */
+    }
+
+    .game-nav-menu.active {
+        display: flex; /* Tampilkan menu saat tombol hamburger diklik */
+    }
+
+    .mobile-menu-toggler {
+        display: block; /* Tampilkan tombol hamburger di mobile */
+    }
+
+    .game-header .game-navbar .nav-button{
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+}
 /* General Game Vibe Reset & Body */
 body {
     margin: 0;

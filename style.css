@@ -8,13 +8,6 @@
     display: block; /* atau flex/grid, sesuai layout Anda */
 }
 
-/* Style untuk tombol navigasi yang aktif */
-.nav-button.active {
-    background-color: #ff00ff; /* Warna neon pink untuk menandai aktif */
-    box-shadow: 0 0 15px #ff00ff;
-    color: #fff;
-}
-
 /* Untuk Modal */
 .modal {
     display: none;
@@ -194,6 +187,7 @@ h1, h2, h3 {
     background-color: #cc00cc;
 }
 
+/* Style for active navigation button */
 .nav-button.active {
     background-color: #00ffea; /* Active button color */
     color: #0d0d21; /* Dark text for active */
@@ -324,7 +318,7 @@ border: 2px solid #ff00ff;
 padding: 5px;
  border-radius: 50%;
 box-shadow: 0 0 10px rgba(255,0,255,0.5);
-overflow: hidden; 
+overflow: hidden;
     flex-shrink: 0;
 }
 
@@ -333,7 +327,7 @@ display: block;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    object-fit: cover; 
+    object-fit: cover;
     image-rendering: pixelated;
 }
 
@@ -563,7 +557,7 @@ display: block;
 /* --- Custom Arcade Focus Style --- */
 .nav-button:focus {
     /* First, remove the default browser outline */
-    outline: none; 
+    outline: none;
 
     /* Then, add a cool glowing effect that matches your theme */
     /* You can use the pink or cyan color from your design */
@@ -590,14 +584,14 @@ button:focus,
 input:focus,
 textarea:focus {
     /* First, ALWAYS remove the default outline */
-    outline: none; 
+    outline: none;
 
     /* Then, add your awesome arcade glow! */
     /* Using a white inner glow and a pink outer glow */
     box-shadow: 0 0 5px #fff, 0 0 12px 6px #ff00ff;
 }
 
-/* Step 3 (Optional but Recommended): For your main navigation buttons, 
+/* Step 3 (Optional but Recommended): For your main navigation buttons,
    you can make the effect slightly more pronounced. */
 .nav-button:focus {
     box-shadow: 0 0 6px #fff, 0 0 15px 8px #ff00ff;

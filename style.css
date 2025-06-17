@@ -668,6 +668,9 @@ textarea:focus {
 }
 
 .modal-body {
+    max-height: 70vh; /* Adjust this value as needed, e.g., 70% of the viewport height */
+    overflow-y: auto; /* Adds a vertical scrollbar when content exceeds max-height */
+    padding-right: 15px; /* Optional: Adds some padding to prevent content from touching the scrollbar */
     padding: 20px;
     font-family: 'Orbitron', sans-serif; /* Use your other body font */
     line-height: 1.7;

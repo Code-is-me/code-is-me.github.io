@@ -30,8 +30,21 @@
     transition: width 1.5s ease-in-out; /* Tambahkan efek transisi */
 }
 
-/* Untuk menu mobile */
+/* Default styles for desktop */
+.mobile-menu-toggler {
+    display: none; /* Hide the burger bar on larger screens by default */
+}
+
+.game-nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* This makes your main nav visible on desktop */
+}
+
+/* Consolidated Media query for mobile (screens up to 768px wide) */
 @media (max-width: 768px) {
+    /* Styles for the mobile navigation menu (initially hidden, shown by JS) */
     .game-nav-menu {
         display: none; /* Sembunyikan menu di mobile secara default */
         flex-direction: column;
@@ -40,14 +53,25 @@
         top: 60px; /* Sesuaikan dengan tinggi header Anda */
         left: 0;
         background-color: rgba(10, 10, 25, 0.9); /* Latar belakang menu mobile */
+        margin-top: 15px;
+        border-top: 1px solid #00ffea;
     }
 
     .game-nav-menu.active {
         display: flex; /* Tampilkan menu saat tombol hamburger diklik */
     }
 
+    /* Styles to show the mobile menu toggler (burger bar) on mobile */
     .mobile-menu-toggler {
-        display: block; /* Tampilkan tombol hamburger di mobile */
+        display: block; /* Show the burger bar on screens up to 768px */
+        background: none;
+        border: 2px solid #00ffea;
+        color: #00ffea;
+        font-size: 1.5em;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 3px;
+        box-shadow: 2px 2px 0px #0097a7;
     }
 
     .game-header .game-navbar .nav-button{
@@ -55,7 +79,42 @@
         text-align: center;
         padding: 15px 0;
     }
+
+    /* Additional mobile-specific styles for responsiveness */
+    .game-navbar {
+        flex-wrap: wrap; /* Allow items to wrap */
+    }
+    .game-nav-menu li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 255, 234, 0.2);
+    }
+    .nav-button {
+        display: block; /* Make buttons fill width */
+        margin: 5px auto;
+        padding: 12px 0;
+        width: 90%;
+    }
+    .game-brand {
+        font-size: 1.2em;
+    }
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack projects on mobile */
+    }
+    .profile-stats-panel {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-avatar {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .contact-form {
+        max-width: 100%;
+    }
 }
+
 /* General Game Vibe Reset & Body */
 body {
     margin: 0;
@@ -145,13 +204,6 @@ h1, h2, h3 {
     vertical-align: middle;
     image-rendering: pixelated; /* Crucial for pixel art */
     margin-right: 10px;
-}
-
-.game-nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
 }
 
 .game-nav-menu li {
@@ -487,73 +539,6 @@ display: block;
     margin-top: 50px;
 }
 
-/* Basic Mobile Responsiveness */
-@media (max-width: 768px) {
-    .game-navbar {
-        flex-wrap: wrap; /* Allow items to wrap */
-    }
-
-    .game-nav-menu {
-        display: none; /* Hidden by default for mobile */
-        flex-direction: column;
-        width: 100%;
-        margin-top: 15px;
-        background-color: rgba(0,0,0,0.9);
-        border-top: 1px solid #00ffea;
-    }
-
-    .game-nav-menu.active { /* Class toggled by JS */
-        display: flex;
-    }
-
-    .game-nav-menu li {
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(0, 255, 234, 0.2);
-    }
-
-    .nav-button {
-        display: block; /* Make buttons fill width */
-        margin: 5px auto;
-        padding: 12px 0;
-        width: 90%;
-    }
-
-    .mobile-menu-toggler {
-        display: block; /* Show hamburger button */
-        background: none;
-        border: 2px solid #00ffea;
-        color: #00ffea;
-        font-size: 1.5em;
-        padding: 5px 10px;
-        cursor: pointer;
-        border-radius: 3px;
-        box-shadow: 2px 2px 0px #0097a7;
-    }
-
-    .game-brand {
-        font-size: 1.2em;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr; /* Stack projects on mobile */
-    }
-
-    .profile-stats-panel {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-avatar {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .contact-form {
-        max-width: 100%;
-    }
-}
 /* --- Custom Arcade Focus Style --- */
 .nav-button:focus {
     /* First, remove the default browser outline */

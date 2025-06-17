@@ -668,11 +668,13 @@ textarea:focus {
 }
 
 .modal-body {
-    max-height: 70vh; /* Adjust this value as needed, e.g., 70% of the viewport height */
-    overflow-y: auto; /* Adds a vertical scrollbar when content exceeds max-height */
-    padding-right: 15px; /* Optional: Adds some padding to prevent content from touching the scrollbar */
-    padding: 20px;
-    font-family: 'Orbitron', sans-serif; /* Use your other body font */
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 20px; /* Applies 20px to all sides */
+    /* If you want more space on the right specifically because of the scrollbar */
+    /* You could add a bit more here, or incorporate into the padding shorthand */
+    /* padding-right: 35px; will make it 20+15, if that's what you're aiming for. */
+    font-family: 'Orbitron', sans-serif;
     line-height: 1.7;
 }
 

@@ -147,6 +147,7 @@ body::before {
     animation: blink 2s steps(1, end) infinite;
     display: inline-block;
     min-width: 1ch; /* Ensures space even when hidden */
+    color: rgb(0, 255, 0);
 }
 @keyframes blink {
     0% { opacity: 1; }

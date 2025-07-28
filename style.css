@@ -242,7 +242,7 @@ h1, h2, h3 {
 /* Style for active navigation button */
 .nav-button.active {
     background-color: #0091ff; /* Active button color */
-    color: #0d0d21; /* Dark text for active */
+    color: #ffffff; /* Dark text for active */
     border-color: #00ccb9;
     box-shadow: 2px 2px 0px #0097a7;
 }

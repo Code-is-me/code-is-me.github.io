@@ -215,7 +215,7 @@ h1, h2, h3 {
 .game-start-button,
 .send-message,
 .download-resume {
-    background-color: #ff00ff; /* Neon magenta */
+    background-color: #980298; /* Neon magenta */
     color: #fff;
     padding: 8px 15px;
     border: 2px solid #cc00cc; /* Darker border */
@@ -241,7 +241,7 @@ h1, h2, h3 {
 
 /* Style for active navigation button */
 .nav-button.active {
-    background-color: #00ffea; /* Active button color */
+    background-color: #0091ff; /* Active button color */
     color: #0d0d21; /* Dark text for active */
     border-color: #00ccb9;
     box-shadow: 2px 2px 0px #0097a7;
@@ -573,13 +573,13 @@ textarea:focus {
 
     /* Then, add your awesome arcade glow! */
     /* Using a white inner glow and a pink outer glow */
-    box-shadow: 0 0 5px #fff, 0 0 12px 6px #ff00ff;
+    box-shadow: 0 0 5px #fff, 0 0 12px 6px #940494;
 }
 
 /* Step 3 (Optional but Recommended): For your main navigation buttons,
    you can make the effect slightly more pronounced. */
 .nav-button:focus {
-    box-shadow: 0 0 6px #fff, 0 0 15px 8px #ff00ff;
+    box-shadow: 0 0 6px #fff, 0 0 15px 8px #ffdd44;
 }
 /* --- Style for the "Mission Briefing" Button --- */
 .details-btn {

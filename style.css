@@ -144,7 +144,7 @@ body::before {
 
 /* Global Blinking Text Effect */
 .blinking-text {
-    animation: blink 1s steps(1, end) infinite;
+    animation: blink 2s steps(1, end) infinite;
     display: inline-block;
     min-width: 1ch; /* Ensures space even when hidden */
 }
